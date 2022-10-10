@@ -26,12 +26,11 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald';
+    font-family: 'Oswald', sans-serif;
 }
 
 p, li, a, button, input, datalist, ::placeholder {
-    font-family: 'Josefin Sans';
-    /* font-family: 'lato'; */
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 /* Home Section */
