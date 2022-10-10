@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/main.css">
+    <link rel="shortcut icon" href="/icons/fav_icon.png" type="image/x-icon">
+    <title>Crawl Transporters</title>
+</head>
+<body>
+    <nav id="navbar" class="z-30 fixed w-full py-3 px-5 m-0 bg-tail_dark flex items-center justify-between gap-5 sm:px-11 lg:px-20">
+        <h3 class="text-tail_light text-2xl font-semibold">Crawl <span style="color: #e9003a;">Transporters</span></h3>
+        <div class="nav_menu absolute hidden top-16 flex-col gap-1 h-fit rounded shadow-md bg-tail_dark right-3 w-fit px-7 py-7 z-20 xm:flex xm:flex-row xm:justify-center xm:items-center xm:gap-5 xm:relative xm:top-0 xm:py-0">
+            <a href="#" class="text-base text-tail_light font-medium text-center block z-20 hover:text-tail_red">Home</a>
+            <a href="#about" class="text-base text-tail_light font-medium text-center block z-20 hover:text-tail_red">About</a>
+            <a href="#services" class="text-base text-tail_light font-medium text-center block z-20 hover:text-tail_red">Services</a>
+            <a href="#on-board" class="text-base text-tail_light font-medium text-center block z-20 hover:text-tail_red">On Board</a>
+            <a href="#company" class="text-base text-tail_light font-medium text-center block z-20 hover:text-tail_red">Company</a>
+        </div>
+        <button class="menu_btn w-7 h-7 bg-transparent z-50 xm:hidden">
+            <img src="/icons/menu.svg" alt="menu button" class="menu object-cover w-full h-full">
+            <img src="/icons/close.svg" alt="close button" class="close hidden object-cover w-full h-full">
+        </button>
+    </nav>
+
+    <!-- Home section -->
+    <section id="home" class="bg-tail_l_theme w-full px-3 py-7 flex flex-col items-center justify-center h-fit sm:px-11 lg:px-24">
+        <div class="home relative flex flex-col items-center lg:max-w-4xl xl:max-w-5xl">
+            <div class="welcome_text w-full px-7 py-5 absolute z-10 flex flex-col bottom-6 mx-auto max-w-md lg:bottom-36">
+                <h3 class="text-tail_light text-4xl text-center font-black mb-3">We will help you deliver your goods.</h3>
+                <p class="text-tail_red text-lg font-semibold text-center">A great platform to transport all your goods from all over the world to Africa.</p>
+            </div>
+        </div>
+        <div class="w-80 py-3 px-5 relative bottom-9 bg-transparent lg:w-fit lg:max-w-4xl lg:bottom-44">
+            <div id="search_form" class="w-full px-3 py-3 rounded-xl items-center justify-center bg-tail_light h-fit flex flex-col">
+                <div class="content flex pb-5 pt-3 gap-3 buttons mb-3">
+                    <button class="rounded focus:text-tail_light focus:bg-tail_red py-1.5 px-3 text-tail_d_theme text-base font-medium">Order</button>
+                    <button class="rounded focus:text-tail_light focus:bg-tail_red py-1.5 px-3 text-tail_d_theme text-base font-medium">Import</button>
+                    <button class="rounded focus:text-tail_light focus:bg-tail_red py-1.5 px-3 text-tail_d_theme text-base font-medium">Export</button>
+                </div>
+                <div class="flex flex-col gap-3 w-full pb-5 lg:flex-row justify-center lg:flex-wrap">
+                    <div class="flex flex-col gap-3 w-full lg:w-fit">
+                        <p class="text-tail_d_theme text-base text-left font-normal">Search: </p>
+                        <div id="search" class="rounded-md w-full relative flex items-center justify-center px-3 mb-3 lg:w-fit">
+                            <img src="/icons/search_light.svg" alt="" class="object-cover w-7 h-7 grayscale">
+                            <input id="" placeholder="Your delivery options" type="text" class="outline-none border-none py-2 px-2 text-tail_d_theme text-base bg-tail_light w-fit">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3 w-full pb-5 lg:w-fit">
+                        <p class="text-tail_d_theme text-base text-left font-normal">Deliver by: </p>
+                        <input id="search" list="deliver_by" placeholder="Your delivery means" type="text" class="outline-none border-none py-2 px-3 text-tail_d_theme text-base bg-tail_light w-full rounded-md active:bg-tail_light">
+                        <datalist id="deliver_by">
+                            <option value="Truck" class="text-tail_d_theme text-base font-normal options">
+                            <option value="Ship" class="text-tail_d_theme text-base font-normal options">
+                            <option value="Air" class="text-tail_d_theme text-base font-normal options">
+                        </datalist>
+                    </div>
+                    <div class="flex flex-col gap-3 w-full pb-1  lg:w-fit">
+                        <p class="text-tail_d_theme text-base text-left font-normal">Delivery time: </p>
+                        <input id="search" list="delivery_time" placeholder="Time taken to deliver" type="text" class="outline-none border-none py-2 px-3 text-tail_d_theme text-base bg-tail_light w-full rounded-md active:bg-tail_light lg:w-fit">
+                        <datalist id="delivery_time">
+                            <option value="Express" class="text-tail_d_theme text-base font-normal options">
+                            <option value="Business" class="text-tail_d_theme text-base font-normal options">
+                            <option value="Custom" class="text-tail_d_theme text-base font-normal options">
+                        </datalist>
+                    </div>
+                    <button class="px-5 search_button py-2 rounded w-full bg-tail_red text-tail_light text-base font-normal lg:w-fit lg:h-fit">Search Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="w-full px-3 py-7 flex flex-col gap-5 sm:px-11 items-center lg:px-24">
+        <div class="w-full h-fit flex flex-col gap-5 relative items-center justify-center">
+            <img src="/assets/container.jpeg" class="w-full h-96 rounded-2xl object-cover brightness-50 transition-all lg:max-w-3xl xl:max-w-4xl">
+        </div>
+        <div class="flex flex-col gap-5">
+            <h3 class="text-2xl text-tail_dark font-semibold">Efficient, Transparent, Negotiable.</h3>
+            <p class="text-tail_d_theme text-base font-normal lg:max-w-3xl">
+            Crawl Transporters is a legal licenced transport company that has been in service since 2011. We are a trusted transportation agency and we have won over <span>11 Gold Medals</span> in <span>World's Transporters</span> of the year & thus the title <span>The King's Envoy</span>.
+            </p>
+            <button class="text-base text-tail_light font-normal bg-tail_red py-2 px-3 rounded-md w-fit">Learn More</button>
+        </div>
+        <div class="w-full flex flex-col items-center justify-center px-3 py-5 gap-5 lg:flex-row">
+            <div class="delivery_option rounded-lg flex flex-col items-center justify-center px-3 py-5 gap-1 w-64">
+                <div class="w-32 h-32">
+                    <img src="/assets/001-truck.png" alt="" class="object-cover">
+                </div>
+                <h4 class="text-lg text-tail_dark font-semibold text-center">Road Transport</h4>
+                <p class="text-base text-tail_d_theme font-normal text-center">We do delivery by Trucks.</p>
+            </div>
+            <div class="delivery_option rounded-lg flex flex-col items-center justify-center px-3 py-5 gap-1 w-64">
+                <div class="w-32 h-32">
+                    <img src="/assets/001-ship.png" alt="" class="object-cover">
+                </div>
+                <h4 class="text-lg text-tail_dark font-semibold text-center">Water Transport</h4>
+                <p class="text-base text-tail_d_theme font-normal text-center">We do delivery by Ships.</p>
+            </div>
+            <div class="delivery_option rounded-lg flex flex-col items-center justify-center px-3 py-5 gap-1 w-64">
+                <div class="w-32 h-32">
+                    <img src="/assets/001-plane.png" alt="" class="object-cover">
+                </div>
+                <h4 class="text-lg text-tail_dark font-semibold text-center">Air Transport</h4>
+                <p class="text-base text-tail_d_theme font-normal text-center">We do delivery by Planes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="w-full px-3 py-7 flex flex-col items-center justify-center gap-7 sm:px-11 xl:px-24">
+        <h3 class="text-tail_dark text-2xl font-bold text-center">How it Works?</h3>
+        <div class="flex flex-col items-center justify-center gap-5 lg:flex-row">
+            <div class="flex flex-col items-center justify-center gap-3 deliver_goods px-5 py-5 w-72 rounded-lg">
+                <div class="del_image p-5">
+                    <img src="/icons/del_type.svg" alt="" class="w-9 h-9">
+                </div>
+                <h3 class="text-tail_dark text-lg font-bold text-center">Select your Cargo Type</h3>
+                <p class="text-tail_d_theme text-base text-left font-normal">Here you can choose from:</p>
+                <div class="options w-fit self-center -mt-3">
+                    <li class="text-tail_red text-base list-none">Order</li>
+                    <li class="text-tail_red text-base list-none">Import</li>
+                    <li class="text-tail_red text-base list-none">Export</li>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-3 deliver_goods px-5 py-5 w-72 rounded-lg">
+                <div class="del_image p-5">
+                    <img src="/icons/del_option.svg" alt="" class="w-9 h-9">
+                </div>
+                <h3 class="text-tail_dark text-lg font-bold text-center">Select your Delivery Option</h3>
+                <p class="text-tail_d_theme text-base text-left font-normal">Here you can choose from:</p>
+                <div class="options w-fit self-center -mt-3">
+                    <li class="text-tail_red text-base list-none">Road</li>
+                    <li class="text-tail_red text-base list-none">Water</li>
+                    <li class="text-tail_red text-base list-none">Plane</li>
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-3 deliver_goods px-5 py-5 w-72 rounded-lg">
+                <div class="del_image p-5">
+                    <img src="/icons/del_time.svg" alt="" class="w-9 h-9">
+                </div>
+                <h3 class="text-tail_dark text-lg font-bold text-center">Select your Delivery Time</h3>
+                <p class="text-tail_d_theme text-base text-left font-normal">Here you can choose from:</p>
+                <div class="options w-fit self-center -mt-3">
+                    <li class="text-tail_red text-base list-none">Express</li>
+                    <li class="text-tail_red text-base list-none">Business</li>
+                    <li class="text-tail_red text-base list-none">Custom</li>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- On Board Section -->
+    <section id="on-board" class="w-full px-3 py-7 flex flex-col gap-5 items-center justify-center sm:px-11 xl:px-24">
+        <div class="w-full px-3 py-3 flex flex-col items-center justify-center gap-3">
+            <h2 class="text-tail_dark text-center text-2xl font-bold">Featured Routes</h2>
+            <p class="text-base text-center text-tail_d_theme font-semibold">A great platform to link you to all sellers worldwide and transport your goods at a great price.</p>
+        </div>
+        <div class="w-full px-3 py-3 flex flex-col items-center justify-center gap-9 lg:flex-row lg:gap-5">
+            <div id="search_form" class="routes rounded-lg w-fit h-fit flex flex-col items-center justify-center gap-7">
+                <div class="w-72 h-40 flex flex-col items-center justify-center relative">
+                    <img src="/assets/category-truck.jpeg" class="object-cover rounded-lg">
+                    <div class="p-2 bg-tail_light rounded-full absolute right-5 top-1 cursor-pointer">
+                        <div id="like" class="z-10 w-6 h-6"></div>
+                    </div>
+                </div>
+                <div class="w-72 px-5 flex flex-col items-center justify-center relative gap-3">
+                    <p class="buttons pb-5 text-tail_d_theme text-base text-center font-normal">The 2019 Mercedes Actross, Fast Delivery, All around Africa.</p>
+                    <div class="flex justify-between flex-row items-center">
+                        <div class="flex flex-row w-60 px-3 items-center justify-between buttons pb-5">
+                            <div class="flex flex-col gap-1 items-center justify-center">
+                                <img src="/icons/goods_load.svg" alt="" class="w-8 h-8 object-cover">
+                                <p class="text-tail_d_theme text-sm font-normal">Scalable</p>
+                            </div>
+                            <div class="flex flex-col gap-1 items-center justify-center">
+                                <img src="/icons/goods_loc.svg" alt="" class="w-8 h-8 object-cover">
+                                <p class="text-tail_d_theme text-sm font-normal">Secure</p>
+                            </div>
+                            <div class="flex flex-col gap-1 items-center justify-center">
+                                <img src="/icons/goods_fast.svg" alt="" class="w-8 h-8 object-cover">
+                                <p class="text-tail_d_theme text-sm font-normal">Fast</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-60 h-fit flex flex-row items-center justify-between px-5 py-3">
+                        <div class="w-fit h-fit flex flex-col gap-0 items-start justify-center">
+                            <p class="text-tail_d_theme text-base font-normal">Price</p>
+                            <p class="text-tail_dark text-lg font-normal">$3,500</p>
+                        </div>
+                        <div class="w-fit h-fit flex flex-col gap-0 items-start justify-center">
+                            <p class="text-tail_d_theme text-base font-normal">Rating</p>
+                            <p class="text-tail_dark text-lg font-normal">(17)5 stars</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="search_form" class="routes rounded-lg w-fit h-fit flex flex-col items-center justify-center gap-7">
+                <div class="w-72 h-40 flex flex-col items-center justify-center relative">
+                    <img src="/assets/category-ship.jpeg" class="object-cover rounded-lg">
+                    <div class="p-2 bg-tail_light rounded-full absolute right-5 top-1 cursor-pointer">
+                        <div id="like" class="z-10 w-6 h-6"></div>
+                    </div>
+                </div>
+                <div class="w-72 px-5 flex flex-col items-center justify-center relative gap-3">
+                    <p class="buttons pb-5 text-tail_d_theme text-base text-center font-normal">Tokyo Blue-Whale, The Pacific Knight, Asia to Africa.</p>
+                    <div class="flex justify-between flex-row items-center">
+                        <div class="flex flex-row w-60 px-3 items-center justify-between buttons pb-5">
+                            <div class="flex flex-col gap-1 items-center justify-center">
+                                <img src="/icons/goods_load.svg" alt="" class="w-8 h-8 object-cover">
+                                <p class="text-tail_d_theme text-sm font-normal">Scalable</p>
+                            </div>
+                            <div class="flex flex-col gap-1 items-center justify-center">
+                                <img src="/icons/goods_loc.svg" alt="" class="w-8 h-8 object-cover">
+                                <p class="text-tail_d_theme text-sm font-normal">Secure</p>
+                            </div>
+                            <div class="flex flex-col gap-1 items-center justify-center">
+                                <img src="/icons/goods_fast.svg" alt="" class="w-8 h-8 object-cover">
+                                <p class="text-tail_d_theme text-sm font-normal">Fast</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-60 h-fit flex flex-row items-center justify-between px-5 py-3">
+                        <div class="w-fit h-fit flex flex-col gap-0 items-start justify-center">
+                            <p class="text-tail_d_theme text-base font-normal">Price</p>
+                            <p class="text-tail_dark text-lg font-normal">$3,500</p>
+                        </div>
+                        <div class="w-fit h-fit flex flex-col gap-0 items-start justify-center">
+                            <p class="text-tail_d_theme text-base font-normal">Rating</p>
+                            <p class="text-tail_dark text-lg font-normal">(17)5 stars</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="search_form" class="routes rounded-lg w-fit h-fit flex flex-col items-center justify-center gap-7">
+                <div class="w-72 h-40 flex flex-col items-center justify-center relative">
+                    <img src="/assets/category-air.jpeg" class="object-cover rounded-lg">
+                    <div class="p-2 bg-tail_light rounded-full absolute right-5 top-1 cursor-pointer">
+                        <div id="like" class="z-10 w-6 h-6"></div>
+                    </div>
+                </div>
+                <div class="w-72 px-5 flex flex-col items-center justify-center relative gap-3">
+                    <p class="buttons pb-5 text-tail_d_theme text-base text-center font-normal">The Atlantic Raven, The Flying Cargo, America to Africa.</p>
+                    <div class="flex justify-between flex-row items-center">
+                        <div class="flex flex-row w-60 px-3 items-center justify-between buttons pb-5">
+                            <div class="flex flex-col gap-1 items-center justify-center">
+                                <img src="/icons/goods_load.svg" alt="" class="w-8 h-8 object-cover">
+                                <p class="text-tail_d_theme text-sm font-normal">Scalable</p>
+                            </div>
+                            <div class="flex flex-col gap-1 items-center justify-center">
+                                <img src="/icons/goods_loc.svg" alt="" class="w-8 h-8 object-cover">
+                                <p class="text-tail_d_theme text-sm font-normal">Secure</p>
+                            </div>
+                            <div class="flex flex-col gap-1 items-center justify-center">
+                                <img src="/icons/goods_fast.svg" alt="" class="w-8 h-8 object-cover">
+                                <p class="text-tail_d_theme text-sm font-normal">Fast</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-60 h-fit flex flex-row items-center justify-between px-5 py-3">
+                        <div class="w-fit h-fit flex flex-col gap-0 items-start justify-center">
+                            <p class="text-tail_d_theme text-base font-normal">Price</p>
+                            <p class="text-tail_dark text-lg font-normal">$3,500</p>
+                        </div>
+                        <div class="w-fit h-fit flex flex-col gap-0 items-start justify-center">
+                            <p class="text-tail_d_theme text-base font-normal">Rating</p>
+                            <p class="text-tail_dark text-lg font-normal">(17)5 stars</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section id="company" class="w-full px-3 py-7 flex flex-col gap-5 items-center juctify-center lg:px-24">
+        <div class="flex flex-col gap-2 items-center justify-center w-80 px-3 py-5">
+            <h3 class="text-tail_dark text-xl text-center font-bold">Have a Question? Get in Touch.</h3>
+            <p class="text-tail_d_theme text-base font-normal text-center">Have anything you would like to know about Crawl Transporters? Press the button below to know inquire.</p>
+            <a href="tel:+256758185721" class="w-fit px-5 py-2 mt-3 rounded-lg bg-tail_red text-base text-tail_light flex flex-row gap-2 items-center">
+                <img src="/icons/phone.svg" alt="" class="w-7 object-cover">
+                Contact Us
+            </a>
+        </div>
+        <div class="w-80 px-3 flex flex-col gap-3 items-center justify-center py-5">
+            <h3 class="text-tail_dark text-xl text-center font-bold">Subscribe to Our Newsletter</h3>
+            <p class="text-tail_d_dark text-center text-base font-normal">For more news and updates about Crawl, consider suscribing to our newsletter.</p>
+            <div class="w-full flex flex-row relative items-center justify-center px-2 py-3">
+                <input id="search" type="email" class="w-full bg-tail_light py-2 px-3 outline-none rounded-md text-base subscribe" placeholder="Enter your email">
+                <button class="absolute w-10 p-2 right-2 bg-tail_red rounded-md">
+                    <img src="/icons/send.svg" class="w-full object-cover">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="w-full flex flex-col pl-7 py-5 gap-5 bg-tail_dark lg:px-7 xl:px-16 xxl:px-20">
+        <div class="w-80 flex flex-col gap-3">
+            <div class="flex flex-row gap-5 items-end justify-start">
+                <img src="/icons/fav_icon.png" alt="" class="w-11 object-cover">
+                <h4 class="text-tail_light text-xl font-bold">Crawl Transporters</h4>
+            </div>
+            <p class="text-tail_l_theme text-base font-normal">A great platform to link you to all sellers worldwide and transport your goods at a great price.</p>
+        </div>
+        <div class="flex flex-col gap-5 items-start justify-center pb-7 footer_line lg:flex-row lg:justify-between">
+            <div class="w-80 flex flex-col gap-3 lg:w-fit">
+                <p class="text-tail_light text-lg font-semibold">Company</p>
+                <div class="w-full flex flex-col gap-0 pl-5">
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Home</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">About</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Services</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">On Board</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Blog</a>
+                    </li>
+                </div>
+            </div>
+            <div class="w-80 flex flex-col gap-3 lg:w-fit">
+                <p class="text-tail_light text-lg font-semibold">Useful Links</p>
+                <div class="w-full flex flex-col gap-0 pl-5">
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Terms of Service</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Privacy Policy</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Pricing</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Order Type</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Delivery Options</a>
+                    </li>
+                </div>
+            </div>
+            <div class="w-80 flex flex-col gap-3 lg:w-fit">
+                <p class="text-tail_light text-lg font-semibold">Crawl Support</p>
+                <div class="w-full flex flex-col gap-0 pl-5">
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Customer Help</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Partners</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Ports & Places</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Delivery Means</a>
+                    </li>
+                    <li class="text-base flex gap-1 items-center hover:translate-x-1 w-fit">
+                        <img src="/icons/right.svg" alt="" class="w-5 object-cover">
+                        <a href="#" class="text-base text-tail_l_theme font-normal hover:text-tail_light">Crawl Team</a>
+                    </li>
+                </div>
+            </div>
+            <div class="w-80 flex flex-col gap-3 lg:w-fit">
+                <p class="text-tail_light text-lg font-semibold">Contact Details</p>
+                <div class="w-full pl-5 flex gap-3 items-start">
+                    <img src="/icons/location.svg" class="w-7">
+                    <p class="text-tail_l_theme text-base font-normal">5th Street Wakaliga,<br>Plot 317,<br>Kampala, Uganda</p>
+                </div>
+                <div class="w-full pl-5 flex gap-3 items-start">
+                    <img src="/icons/email.svg" class="w-7">
+                    <a href="mailto:yassinkatungi67@gmail.com" class="text-tail_l_theme text-base font-normal">crawl_transporters@gmail.com</a>
+                </div>
+                <div class="w-full pl-5 flex gap-3 items-start">
+                    <img src="/icons/call.svg" class="w-7">
+                    <a href="tel:+256758185721" class="text-tail_l_theme text-base font-normal">+256-758-185721</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-5 items-center self-center justify-self-center justify-center w-80">
+            <div class="flex gap-3 items-center justify-center">
+                <a href="http://www.facebook.com/CrawlTransporters"><img src="/assets/social_facebook.svg" class="w-8 cursor-pointer opacity-75  hover:opacity-100"></a>
+                <a href="http://www.instagram.com/CrawlTransporters"><img src="/assets/social_instagram.svg" class="w-7 cursor-pointer opacity-75  hover:opacity-100"></a>
+                <a href="http://www.linkedin.com/CrawlTransporters"><img src="/assets/social_linkedin.svg" class="w-7 cursor-pointer opacity-75 hover:opacity-100"></a>
+                <a href="http://www.twitter.com/CrawlTransporters"><img src="/assets/social_twitter.svg" class="w-7 cursor-pointer opacity-75 hover:opacity-100"></a>
+                <a href="http://www.youtube.com/CrawlTransporters"><img src="/assets/social_youtube.svg" class="w-7 cursor-pointer opacity-75 hover:opacity-100"></a>
+            </div>
+            <p class="text-tail_l_theme text-base text-center font-normal">All Rights Reserved &copy;Crawl Transporters Ltd. 2022</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

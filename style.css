@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all .3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background-color: #011d24ee;
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e9003a;
+    border-radius: 3px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald';
+}
+
+p, li, a, button, input, datalist, ::placeholder {
+    font-family: 'Josefin Sans';
+    /* font-family: 'lato'; */
+}
+
+/* Home Section */
+.home {
+    margin-top: 2.5rem;
+    width: 100%;
+    height: 75vh;
+    background: url('/assets/home.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 11px;
+}
+
+.buttons {
+    border-bottom: 1px solid #0002;
+}
+
+#search {
+    border: 1px solid #0002;
+}
+
+#search_form {
+    box-shadow: 0 3px 7px #0002;
+}
+
+.search_button {
+    box-shadow: 0 0 5px #011d2499;
+}
+
+/* About Section */
+.shadow_btn {
+    box-shadow: 0 2px 7px #ccc;
+}
+
+p span {
+    color: #e9003a;
+    font-style: italic;
+}
+
+.delivery_option {
+    box-shadow: 0 3px 11px #0002;
+}
+
+/* Services Section */
+.del_image {
+    background-color: #e9003a22;
+    border-radius: 50%;
+}
+
+.deliver_goods {
+    box-shadow: 0 3px 11px #0002;
+}
+
+/* On Board Section */
+#like {
+    background: url('/icons/heart-outline.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+#like.like {
+    background: url('/icons/heart.svg');
+    background-size: cover;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    z-index: 50;
+}
+
+/* Footer */
+.footer_line {
+    border-bottom: 1px solid #fff5;
+}
